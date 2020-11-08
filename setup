@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+echo  "Setting up dot files..."
+
+ln -fs ~/.dot/hammerspoon ~/.hammerspoon
