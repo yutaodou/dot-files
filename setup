@@ -2,4 +2,7 @@
 
 echo  "Setting up dot files..."
 
-ln -fs ~/.dot/hammerspoon ~/.hammerspoon
+BASEDIR=$(dirname $0)
+
+# Setup hammerspoon
+ln -fvs $PWD/$BASEDIR/hammerspoon ~/.hammerspoon
