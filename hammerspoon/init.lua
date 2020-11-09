@@ -28,3 +28,6 @@ for k, action in pairs(winwinHotkeyMapping) do
         spoon.WinWin:moveAndResize(action)
     end)
 end
+hs.hotkey.bind({"cmd", "alt", "ctrl"}, "n", function()
+   spoon.WinWin:moveToScreen("next")
+end)
