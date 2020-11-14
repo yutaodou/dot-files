@@ -8,6 +8,10 @@ BASEDIR=$(dirname $0)
 ln -fvs $PWD/$BASEDIR/hammerspoon ~/.hammerspoon
 
 # ****************************************************************
+# Setup tmux
+ln -fvs $PWD/$BASEDIR/tmux/tmux.conf ~/.tmux.conf
+
+# ****************************************************************
 # 替换brew.git:
 cd "$(brew --repo)"
 git remote set-url origin https://mirrors.ustc.edu.cn/brew.git
