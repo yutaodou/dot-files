@@ -31,3 +31,20 @@ end
 hs.hotkey.bind({"cmd", "alt", "ctrl"}, "n", function()
    spoon.WinWin:moveToScreen("next")
 end)
+
+-- bind hotkey to applications
+appHotkeyMapping = {
+    t = "Microsoft ToDo",
+    p = "Pomotodo",
+    b = "Bitwarden"
+}
+
+function open(name)
+    return function()
+        hs.application.launchOrFocus(name)
+    end
+end
+
+for k , app in pairs(appHotkeyMapping) do
+    hs.hotkey.bind({"cmd", "alt", "ctrl"}, k, open(app))
+end
